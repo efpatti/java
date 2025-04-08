@@ -8,7 +8,7 @@ public class OperadoresLogicos {
         n1 = sc.nextInt();
         System.out.print("Número 2: ");
         n2 = sc.nextInt();
-        diferente = n1 != n2 ? true : false;
+        diferente = n1 != n2;
         sc.close();
         if (diferente) {
             if(n1 > n2) {
