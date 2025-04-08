@@ -1,6 +1,17 @@
 import java.util.Scanner;
 public class Constant {
     public static void main(String[]args) {
+        /*
+         int idade = 10;
+         dawdawd
+         dawdaw
+         dawdaw
+         dawdawd
+         dawdawda
+         dawdawdaw
+         dawdwa
+         int peso = 50;
+         */
         final float pi = 3.14f;
         double base, height, area_triangulo;
         Scanner sc = new Scanner(System.in);
