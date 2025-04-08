@@ -2,56 +2,58 @@ import java.util.Scanner;
 
 public class Strings {
     public static void main(String[] args) {
-        // Declaração de variáveis
+
+        // Variable declaration
         String name, nameWithoutWhitespaces, firstName, lastName, input, text1, text2;
         int charactersName;
-        boolean sussurrar;
+        boolean whisper;
 
-        // Iniciando scanner para ler entrada do usuário
+        // Initiating scanner to read user input
         Scanner sc = new Scanner(System.in);
 
-        // Pergunta se o usuário quer sussurrar
-        System.out.print("Vai sussurrar? (s/N) ");
+        // Ask the user if they want to whisper
+        System.out.print("Will you whisper? (s/N) ");
         input = sc.nextLine();
 
-        // Transforma em minúsculo e compara com "s"
-        sussurrar = input.toLowerCase().equals("s");
+        // Convert input to lowercase and compare with "s"
+        whisper = input.toLowerCase().equals("s");
 
-        // Recebe o primeiro e o último nome
+        // Get the first and last name
         System.out.print("First name: ");
         firstName = sc.nextLine();
 
         System.out.print("Last name: ");
         lastName = sc.nextLine();
 
-        // Fecha o scanner (boa prática!)
+        // Close the scanner (best practice!)
         sc.close();
 
-        // Junta os nomes
+        // Concatenate the names
         name = firstName + " " + lastName;
 
-        // Remove todos os espaços em branco
+        // Remove all whitespaces
         nameWithoutWhitespaces = name.replaceAll("\\s", "");
 
-        // Conta quantos caracteres tem sem espaços
+        // Count character length without whitespace
         charactersName = nameWithoutWhitespaces.length();
 
-        // Monta os textos com String.format
+        //  Format strings with variables using String.format
         text1 = String.format("Your name is %s", name);
         text2 = String.format("Name length is %d", charactersName);
 
-        // Se o usuário quiser sussurrar, deixa tudo em minúsculo
-        if (sussurrar) {
+        // If user wants to whisper, convert text to lowercase 
+        if (whisper) {
             text1 = text1.toLowerCase();
             text2 = text2.toLowerCase();
         }
-        // Caso contrário, grita em maiúsculo
+
+        // Otherwise, convert text to uppercase
         else {
             text1 = text1.toUpperCase();
             text2 = text2.toUpperCase();
         }
 
-        // Mostra os textos finais
+        // Print the final texts
         System.out.println(text1);
         System.out.println(text2);
     }
