@@ -4,7 +4,7 @@ public class Strings {
     public static void main(String[] args) {
 
         // Variable declaration
-        String name, nameWithoutWhitespaces, firstName, lastName, input, text1, text2;
+        String fullName, cleanFullName, firstName, lastName, input, text1, text2;
         int charactersName;
         boolean whisper;
 
@@ -29,17 +29,16 @@ public class Strings {
         sc.close();
 
         // Concatenate the names
-        name = firstName + " " + lastName;
-
-        // Remove all whitespaces
-        // nameWithoutWhitespaces = name.replaceAll("\\s", "");
-        nameWithoutWhitespaces = firstName.concat(" "+ lastName);
+        // fullName = firstName + " " + lastName;
+        fullName = firstName.concat(" " + lastName);
+        // cleanFullName = firstName + lastName;
+        cleanFullName = firstName.concat(lastName);
 
         // Count character length without whitespace
-        charactersName = nameWithoutWhitespaces.length();
+        charactersName = cleanFullName.length();
 
         //  Format strings with variables using String.format
-        text1 = String.format("Your name is %s", name);
+        text1 = String.format("Your name is %s", fullName);
         text2 = String.format("Name length is %d", charactersName);
 
         // If user wants to whisper, convert text to lowercase 
