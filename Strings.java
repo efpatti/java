@@ -33,7 +33,7 @@ public class Strings {
 
         // Remove all whitespaces
         // nameWithoutWhitespaces = name.replaceAll("\\s", "");
-        nameWithoutWhitespaces = firstName.concat(lastName);
+        nameWithoutWhitespaces = firstName.concat(" "+ lastName);
 
         // Count character length without whitespace
         charactersName = nameWithoutWhitespaces.length();
